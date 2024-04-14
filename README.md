@@ -1,6 +1,6 @@
 # Data-6-Nations
 
-Vous trouverez ici notre projet de fin de module data analyse de B2
+Vous trouverez ici notre projet de fin du module data analyse de B2
 
 ### membres du groupe 
 
@@ -14,3 +14,4 @@ Vous trouverez ici notre projet de fin de module data analyse de B2
 
 ## [App React](./AppReact)
 
+    
