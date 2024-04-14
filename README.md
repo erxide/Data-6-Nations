@@ -8,9 +8,9 @@ Vous trouverez ici notre projet de fin de module data analyse de B2
 - [Clément PENOT](https://github.com/fyleeds)
 - [Erwan SINCK](https://github.com/erxide)
 
-## [Récuperation Data](./RecuperationData/README.md)
+## [Récuperation Data](./RecuperationData)
 
-## [API](./API/README.md)
+## [API](./API)
 
-## [App React](./AppReact/README.md)
+## [App React](./AppReact)
 
