@@ -5,6 +5,7 @@ le but du projet est de trouver un plage de donnée et la traité, nous avons pe
 ## Sommaire
 
 - [Scrapping](README.md#scrapping)
+- [Formatage des données](README.md#formatage-des-données)
 
 
 ## Scrapping 
