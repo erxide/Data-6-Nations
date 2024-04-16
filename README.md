@@ -10,6 +10,9 @@ Vous trouverez ici notre projet de fin du module data analyse de B2
 
 ## [Récuperation Data](./RecuperationData)
 
+- [Scrapping](./RecuperationData/README.md#scrapping)
+- [Formatage des données](./RecuperationData/README.md#formatage-des-données)
+
 ## [API](./API)
 
 ## [App React](./AppReact)
