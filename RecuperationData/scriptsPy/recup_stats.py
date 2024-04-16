@@ -11,7 +11,7 @@ async def list_stats_année(data):
 async def list_stats(data):
     res = {}
     for année in data["TeamStats"] :
-        res[année] = await list_stats_année(data["TeamStats"]["2000"]["TopStatsTeam"]["Stat_Team"])
+        res[année] = await list_stats_année(data["TeamStats"][année]["TopStatsTeam"]["Stat_Team"])
     return res
 
 async def main():
