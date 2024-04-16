@@ -33,7 +33,7 @@ async def main():
         while True :
             année_plus_petite = str(await plus_petite_année(await longueur_tab(data)))
             if await check(await longueur_tab(data)):
-                print("triage effectuer")
+                print("Triage des stats effectuer !")
                 with open('listStats.json', 'w') as f:
                     json.dump(data, f)
                 break
