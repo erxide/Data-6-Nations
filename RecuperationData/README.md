@@ -14,4 +14,6 @@ En premier lieu nous avons voulu faire un get vers la page de statistiques, sauf
 
 ## Formatage des données
 
-Avec toute ces données, je verifie que statisque existe bien pour chaque année, donc je recuperes chaques nom de statistique pour chaque années ([script](./scriptsPy/recup_stats.py)). Ensuite je regarde la longueur de chaque tableaux de statisque de chaque années pour supprimer les statistique des autres tableaux qui n'as pas dans le plus petit des tableaux. Et je refais cette méthodes jusqu'à avoir toutes les statistique bien présentes chaque année ([script](./scriptsPy/triage_stats.py)).
+Avec toute ces données, je verifie que statisque existe bien pour chaque année, donc je recuperes chaques nom de statistique pour chaque années ([script](./scriptsPy/recup_stats.py)). Ensuite je regarde la longueur de chaque tableaux de statisque de chaque années pour supprimer les statistique des autres tableaux qui n'as pas dans le plus petit des tableaux. Et je refais cette méthodes jusqu'à avoir toutes les statistique bien présentes chaque année ([script](./scriptsPy/triage_stats.py)). 
+
+Une fois qu'on est sur que chaque statistiques existent bien pour chaque années, on peut recuperer chaques valeurs de chaques statisques pour chacunes des équipes pour chaques années et creer le fichier data.json pour notre [api](../API/README.md) ([script](./scriptsPy/creation_data.py)).

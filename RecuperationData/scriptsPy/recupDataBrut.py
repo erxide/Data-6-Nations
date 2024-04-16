@@ -11,7 +11,7 @@ async def recup_data_équipe_une_année(année: int = 2024) :
         return {"erreur" : "erreur de la requête"}
 
 async def recup_data(prem_année : int = 2000, der_année: int = 2024):
-        print(f"Recuperation des donnée de {prem_année} à {der_année}")
+        print(f"Recuperation des données de {prem_année} à {der_année}")
         der_année = der_année + 1
         data = {}
         total_years = der_année - prem_année
