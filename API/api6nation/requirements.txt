@@ -1,0 +1,6 @@
+Django>=3.0,<4.0
+django-environ>=0.7
+django-debug-toolbar>=3.2
+django-crispy-forms>=1.11
+django-cors-headers>=3.7.0
+django-secure>=2.1.1
