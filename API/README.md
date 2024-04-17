@@ -1,1 +1,39 @@
 # API
+
+une fois fichier data.json bien formaté comme on le voulais, on peut en faire une api.
+
+## Sommaire :
+
+- [Lancer l'api]()
+- [Fonctionnement de l'api]()
+
+## Lancer l'api
+
+- une fois avoir clone le projet :
+
+    ```bash
+    git clone https://github.com/erxide/Data-6-Nations.git
+    ```
+- ce rendre a la racine de l'api :
+    ```bash
+    cd Data-6-Nations/API/api6nation/
+    ```
+
+- installer les dépendances :
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+- faire la migration:
+    ```bash
+    python3 manage.py migrate
+    ```
+- pour finir lancer :
+    ```bash
+    python3 manage.py runserver
+    ```
+
+- pour changer le port d'écoute :
+    ```bash
+    python3 manage.py runserver <port>
+    ```
