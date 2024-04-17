@@ -58,3 +58,8 @@ Les équipes disponnibles : France, Italy, England, Wales, Scotland, Ireland. Le
     ```
     http://localhost:8000/api/<Nom d'équipe>/<année>/<statisque>
     ```
+
+- recuperer liste des statisques :
+    ```
+    http://localhost:8000/api/stats/
+    ```
