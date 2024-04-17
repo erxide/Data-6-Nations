@@ -4,8 +4,8 @@ une fois fichier data.json bien formaté comme on le voulais, on peut en faire u
 
 ## Sommaire :
 
-- [Lancer l'api]()
-- [Fonctionnement de l'api]()
+- [Lancer l'api](README.md#lancer-lapi)
+- [Fonctionnement de l'api](README.md#fonctionnement-de-lapi)
 
 ## Lancer l'api
 
@@ -36,4 +36,25 @@ une fois fichier data.json bien formaté comme on le voulais, on peut en faire u
 - pour changer le port d'écoute :
     ```bash
     python3 manage.py runserver <port>
+    ```
+
+## Fonctionnement de l'api
+
+Les équipes disponnibles : France, Italy, England, Wales, Scotland, Ireland. Les statistiques vont de 2000 à 2024.
+
+- recuperer toutes les statistiques d'une équipes sur toutes les années :
+    ```
+    http://localhost:8000/api/<Nom d'équipe>
+    ```
+- recuperer toutes les statistiques d'une équipes sur une année :
+    ```
+    http://localhost:8000/api/<Nom d'équipe>/<année>
+    ```
+- recuperer une statistiques d'une équipes sur toutes les années :
+    ```
+    http://localhost:8000/api/<Nom d'équipe>/<statisque>
+    ```
+- recuperer une statistiques d'une équipes sur une années :
+    ```
+    http://localhost:8000/api/<Nom d'équipe>/<année>/<statisque>
     ```

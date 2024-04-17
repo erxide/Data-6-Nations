@@ -15,6 +15,10 @@ Vous trouverez ici notre projet de fin du module data analyse de B2
 
 ## [API](./API)
 
+- [Lancer l'api](./API/README.md#lancer-lapi)
+- [Fonctionnement de l'api](./API/README.md#fonctionnement-de-lapi)
+
+
 ## [App React](./AppReact)
 
     
