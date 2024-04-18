@@ -20,8 +20,13 @@ function App() {
         const cachedData = localStorage.getItem(`${team}Data`)
         if (!cachedData){
           const data = await axios.get(`http://localhost:8000/api/${team}`)
-          localStorage.setItem(`${team}Data`, JSON.stringify(data))
+          localStorage.setItem(`${team}Data`, JSON.stringify(data.data))
         }
+      };
+      const cachedData = localStorage.getItem(`List_stats`)
+      if (!cachedData){
+        const data = await axios.get(`http://localhost:8000/api/stats/`)
+        localStorage.setItem(`List_stats`, JSON.stringify(data.data))
       };
       setIsLoading(false);
     } catch(error) {
