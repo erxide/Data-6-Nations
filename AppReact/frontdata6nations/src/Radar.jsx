@@ -14,7 +14,7 @@ function Radar() {
     const years = (Array.from({length: 24}, (_, i) => 2023 - i))
     const [year, setYear] = useState(localStorage.getItem('selectedYear') || years[0])
     const teams = ["France", "Italy", "Scotland", "Wales", "Ireland", "England"]
-    const listScrumStats = ["Scrum-Lost", "Scrum-Reset-Retained", "Scrums Lost %", "Scrums Lost from Opp feed", "Scrums Won %", "Scrums Won from Opp feed", "Scrum-Won"]
+    const listScrumStats = ["Scrum-Lost", "Scrum-Reset-Retained", "Scrums Lost %", "Scrums Lost from Opp feed", "Scrums Won %", "Scrums Won from Opp feed", "Scrum-Won"];
 
     const handleYear = (event) => {
         setYear(event.target.value);
