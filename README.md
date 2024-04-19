@@ -21,4 +21,5 @@ Vous trouverez ici notre projet de fin du module data analyse de B2
 
 ## [App React](./AppReact)
 
-    
+
+-Lancer react avec npm start
