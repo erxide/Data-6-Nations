@@ -1,0 +1,21 @@
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Cela crée de l'espace entre les boutons */
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Pour un effet de transition au survol */
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
