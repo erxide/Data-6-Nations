@@ -10,7 +10,7 @@ le but du projet est de trouver un plage de donnée et la traité, nous avons pe
 
 ## Scrapping 
 
-En premier lieu nous avons voulu faire un get vers la page de statistiques, sauf qu'ils se sont proteger contre le scrapping et n' envois aucune informations. En inspectant la page au niveau de l'onglet Réseau, nous nous sommes aperçues que le site faisait une requette vers leur [api](https://stats-api.stadion.io/api/RU/competitions/topStats/seasontotal/301/2024) pour recuperer les informations, alors nous avons fais la meme chose. Avec ce [script](./scriptsPy/recupDataBrut.py) python j'extrais les informations de chaque statistques pour chaque année de 2000 à 2024 (car il n'xiste que ces années).
+En premier lieu nous avons voulu faire un get vers la page de statistiques, sauf qu'ils se sont proteger contre le scrapping et n' envois aucune informations. En inspectant la page au niveau de l'onglet Réseau, nous nous sommes aperçues que le site faisait une requette vers leur [api](https://stats-api.stadion.io/api/RU/competitions/topStats/seasontotal/301/2023) pour recuperer les informations, alors nous avons fais la meme chose. Avec ce [script](./scriptsPy/recupDataBrut.py) python j'extrais les informations de chaque statistques pour chaque année de 2000 à 2023.
 
 ## Formatage des données
 

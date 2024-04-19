@@ -77,25 +77,100 @@ function Cate() {
         const tabIreland = dataIreland ? createTab(dataIreland) : [];
         const tabEngland = dataEngland ? createTab(dataEngland): [];
 
-        
+        let myChart = null;
 
+        const ctx = document.getElementById('myChart');
+
+        if (dataFrance) {
+            if (ctx) {
+                myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: Object.keys(dataFrance),
+                        datasets : [
+                            {
+                              label:'Ireland',
+                              data: tabIreland,
+                              borderColor: 'rgba(75, 192, 192, 1)',
+                              backgroundColor : 'rgba(75, 192, 192, 1)',
+                              borderWidth: 3
+                            },
+                            {
+                              label: 'France',
+                              data: tabFrance,
+                              backgroundColor : 'rgba(0, 112, 192, 1)',
+                              borderColor: 'rgba(0, 112, 192, 1)',
+                              borderWidth: 3
+                            },
+                            {
+                              label: 'England',
+                              data: tabEngland,
+                              backgroundColor : 'rgba(0, 0, 0, 1)',
+                              borderColor: 'rgba(0, 0, 0, 1)',
+                              borderWidth: 3
+                            },
+                            {
+                              label: 'Wales',
+                              data: tabWales,
+                              backgroundColor : 'rgba(255, 0, 0, 1)',
+                              borderColor: 'rgba(255, 0, 0, 1)',
+                              borderWidth: 3
+                            },
+                            {
+                              label: 'Italy',
+                              data: tabItaly,
+                              backgroundColor : 'rgba(135, 206, 250, 1)',
+                              borderColor: 'rgba(135, 206, 250, 1)',
+                              borderWidth: 3
+                            },
+                            {
+                              label: 'Scotland',
+                              data: tabScotland,
+                              backgroundColor : 'rgba(0, 0, 139, 1)',
+                              borderColor: 'rgba(0, 0, 139, 1)',
+                              borderWidth: 3
+                            }
+                          ],
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        responsive: true,
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        },
+                    },
+                });
+            };
+        };
         setLoading(false)
+        return () => {
+            if (myChart) {
+              myChart.destroy();
+            }
+        };
       }, [stat])
 
-    return (
-        <>
-            <p>skjifd</p>
+      return (
+        <div>
             { loading ? (
                 <p>Loading...</p>
             ) : (
-            <select value={stat} onChange={handleStat}>
-              {stats.map(s => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-              </select> 
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '85vh' }}>
+                <h1>{stat}</h1>
+                <canvas id="myChart"></canvas>
+                <select value={stat} onChange={handleStat}>
+                {stats.map(s => (
+                    <option key={s} value={s}>{s}</option>
+                ))}
+                </select> 
+            </div>
             )}      
-        </>
+        </div>
     );
+    
+    
 }
 
 

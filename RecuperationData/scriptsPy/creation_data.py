@@ -14,14 +14,18 @@ async def main():
         data = {}
         for équipe in équipes:
             data[équipe] = {}
-            for année in liste_stats:
+            for année in list(range(2000, 2024)):
                 data[équipe][année] = {}
-                for stat in liste_stats[année]:
-                    for index in dataBrut["TeamStats"][année]["TopStatsTeam"]["Stat_Team"]:
+                for stat in liste_stats["stats"]:
+                    for index in dataBrut["TeamStats"][str(année)]["TopStatsTeam"]["Stat_Team"]:
                         if index["Name"] == stat:
                             for place in index["Team"]:
                                 if place["Name"] == équipe:
+                                    if not place["Value"]:
+                                        print("nooooooooo")
+                                        exit(1)
                                     data[équipe][année][stat] = place["Value"]
+
         with open("data.json", "w") as f3:
             json.dump(data, f3)
         print("data.json creer avec succés !")
@@ -31,3 +35,16 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+    # for année in liste_stats:
+    #             data[équipe][année] = {}
+    #             for stat in liste_stats[année]:
+    #                 for index in dataBrut["TeamStats"][année]["TopStatsTeam"]["Stat_Team"]:
+    #                     if index["Name"] == stat:
+    #                         for place in index["Team"]:
+    #                             if place["Name"] == équipe:
+    #                                 if not place["Value"]:
+    #                                     print("nooooooooo")
+    #                                     exit(1)
+    #                                 data[équipe][année][stat] = place["Value"]
