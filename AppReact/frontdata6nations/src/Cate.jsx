@@ -51,13 +51,13 @@ function Cate() {
       }, []);
 
       useEffect (() => {
-        setStat(stats[58])
+        setStat(stats[33])
       }, [stats])
 
       useEffect (() => {
         
         const createTab = (data) => {
-            const tab = []
+            let tab = []
             if (data) {
                 const years = Object.keys(data);
                 years.forEach(year => {
@@ -67,7 +67,18 @@ function Cate() {
             } else {
                 console.error("Data is null")
             }
+            tab = veriftab(tab)
             return tab
+        };
+
+        const veriftab = (data) => {
+            for (let i of data) {
+                if (i === undefined) {
+                    data[data.indexOf(i)] = 0;
+                }
+            }
+
+            return data
         };
 
         const tabFrance = dataFrance ? createTab(dataFrance) : [];

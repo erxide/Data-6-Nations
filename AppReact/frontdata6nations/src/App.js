@@ -1,13 +1,15 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Cate from './Cate'
+import Cate from './Cate';
+import Radar from './Radar';
 
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [typeGraph, setTypeGraph] = useState('cate');
 
   const clearCache = () => {
     localStorage.clear();
@@ -41,6 +43,10 @@ function App() {
     fetchData();
   }, []);
 
+  const handleGraphButtonClick = (graph) => {
+    setTypeGraph(graph);
+  };
+
 
   return (
     <>
@@ -51,7 +57,12 @@ function App() {
         ) : (
           <>
             <button style={{ position: 'fixed', top: '10px', right: '10px', zIndex: '999' }} onClick={clearCache}>Clear Cache</button>
-            <Cate/>
+            <div style={{display: 'flex', justifyContent:"center",alignItems: 'center',gap: "10px", top:"10px"}}>
+              <button className="button" onClick={() => handleGraphButtonClick('cate')}>cate</button>
+              <button className="button" onClick={() => handleGraphButtonClick('radar')}>radar</button>
+            </div>
+            {typeGraph === 'cate' && <Cate/>}
+            {typeGraph === 'radar' && <Radar/>}
           </>
         )
       } 

@@ -21,9 +21,6 @@ async def main():
                         if index["Name"] == stat:
                             for place in index["Team"]:
                                 if place["Name"] == équipe:
-                                    if not place["Value"]:
-                                        print("nooooooooo")
-                                        exit(1)
                                     data[équipe][année][stat] = place["Value"]
 
         with open("data.json", "w") as f3:
