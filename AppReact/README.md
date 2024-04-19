@@ -1,6 +1,6 @@
 # App React
 
-Maintenan qu'on a les datas et l'api, nous pouvons passer a l'affichage des stats via deux graphiques : courbes et radar, avec la lib [chart.js](https://www.chartjs.org/).
+Maintenant qu'on a les data et l'API, nous pouvons passer à l'affichage des stats via deux graphiques : courbes et radar, avec la lib [chart.js](https://www.chartjs.org/).
 
 ## Sommaire
 
@@ -31,19 +31,19 @@ Maintenan qu'on a les datas et l'api, nous pouvons passer a l'affichage des stat
 
 ## Fontionnement du Dashboard
 
-En premier lieu le Dashboard pour chaque équipes verifi si leurs statistiques sont bien enregistrer dans le local storage, sinon il requette l'api pour les recuperer et les stocker. Une fois les données initialiser chaque graphique récuperent les datas via le local storage pour éviter des requetes en masse sur l'api. Arriver la page vous avez le choix, via les bouton bleu en haut, de choisir d'afficher soit le [cate](README.md#graphique-courbes), soit le [radar](README.md#graphique-radar). Chaque graphique est independant de l'autre.
+En premier lieu le Dashboard pour chaque équipes vérifie si leurs statistiques sont bien enregistrer dans le local storage, sinon il requête l'api pour les récupérer et les stocker. Une fois les données initialisées, chaque graphique récupère les datas via le local storage pour éviter des requêtes en masse sur l'api. Arriver la page vous avez le choix, via les boutons bleus en haut, de choisir d'afficher soit le [cate](README.md#graphique-courbes), soit le [radar](README.md#graphique-radar). Chaque graphique est indépendant de l'autre.
 
 ## Graphique Courbes
 
-Comme dit plus haut le graphique Courbes, dit cate, récupere les datas de chaques équipes de chaques années par rapport a une statistiques, cela veut dire par exemple, qu'il recupere toutes les données des cartons jaunes de chaque année pour chaque équipe et les affiches sous forme d'un graphique courbe :
+Comme dit plus haut le graphique Courbes, dit cate, récupère les datas de chaque équipe de chaque année par rapport à une statistique, cela veut dire par exemple, qu'il récupère toutes les données des cartons jaunes de chaque année pour chaque équipe et les affiches sous forme d'un graphique courbe :
 
 ![ExempleGraphCartonJaune](../img/graphYellowCards.png)
 
-De plus vous pouvez choisir qu'elle statisque afficher parmit toutes les statisques que l'api propose via le sélécteur en bas de la page
+De plus, vous pouvez choisir quelles statistiques afficher parmi toutes les statistiques que l'API propose via le sélecteur en bas de la page.
 
 ## Graphique Radar
 
-Pour le graphique radar, lui récupere les datas de chaque équipes mais seulement pour une année et pour un ensemble de statisques precis comme pour cet exemple pour la meler. Le probleme étant que chaque statistiques n'est pas sur la meme échelle donc je viens faire un produit en croix : (ValeurDeBase * 100) / getMax(ValeurDeBase), pour récuperer un pourcentage, et mettre chaque statistiques sur une échelle de 100. Ici nous pouvons voir le radar pour l'année 2010 :
+Pour le graphique radar, lui récupère les datas de chaque équipe, mais seulement pour une année et pour un ensemble de statistiques précis comme pour cet exemple pour la mêler. Le problème étant que chaque statistique n'est pas sur la même échelle, donc je viens faire un produit en croix : (ValeurDeBase * 100)/ getMax(ValeurDeBase), pour récupérer un pourcentage et mettre chaque statistique sur une échelle de 100. Ici, nous pouvons voir le radar pour l'année 2010 :
 
 ![ExempleGraphRadar](../img/graphRadar.png)
 

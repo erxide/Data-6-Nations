@@ -1,6 +1,6 @@
 # API
 
-une fois fichier data.json bien formaté comme on le voulais, on peut en faire une api.
+Une fois fichier data.json bien formaté comme on le voulait, on peut en faire une api.
 
 ## Sommaire :
 
@@ -14,7 +14,7 @@ une fois fichier data.json bien formaté comme on le voulais, on peut en faire u
     ```bash
     git clone https://github.com/erxide/Data-6-Nations.git
     ```
-- ce rendre a la racine de l'api :
+- se rendre à la racine de l'API:
     ```bash
     cd Data-6-Nations/API/api6nation/
     ```
@@ -28,7 +28,7 @@ une fois fichier data.json bien formaté comme on le voulais, on peut en faire u
     ```bash
     python3 manage.py migrate
     ```
-- pour finir lancer :
+- pour finir, lancer :
     ```bash
     python3 manage.py runserver
     ```
@@ -40,21 +40,21 @@ une fois fichier data.json bien formaté comme on le voulais, on peut en faire u
 
 ## Fonctionnement de l'api
 
-Les équipes disponnibles : France, Italy, England, Wales, Scotland, Ireland. Les statistiques vont de 2000 à 2024.
+Les équipes disponibles  : France, Italy, England, Wales, Scotland, Ireland. Les statistiques vont de 2000 à 2024.
 
-- recuperer toutes les statistiques d'une équipes sur toutes les années :
+- recuperer toutes les statistiques d'une équipe sur toutes les années :
     ```
     http://localhost:8000/api/<Nom d'équipe>
     ```
-- recuperer toutes les statistiques d'une équipes sur une année :
+- recuperer toutes les statistiques d'une équipe sur une année :
     ```
     http://localhost:8000/api/<Nom d'équipe>/<année>
     ```
-- recuperer une statistiques d'une équipes sur toutes les années :
+- recuperer une statistiques d'une équipe sur toutes les années :
     ```
     http://localhost:8000/api/<Nom d'équipe>/<statisque>
     ```
-- recuperer une statistiques d'une équipes sur une années :
+- recuperer une statistiques d'une équipe sur une année :
     ```
     http://localhost:8000/api/<Nom d'équipe>/<année>/<statisque>
     ```

@@ -1,6 +1,6 @@
 # Data-6-Nations
 
-Vous trouverez ici notre projet de fin du module data analyse de B2
+Vous trouverez ici notre projet de fin du module data analyse de B2.
 
 ### membres du groupe 
 
@@ -8,7 +8,7 @@ Vous trouverez ici notre projet de fin du module data analyse de B2
 - [Clément PENOT](https://github.com/fyleeds)
 - [Erwan SINCK](https://github.com/erxide)
 
-## [Récuperation Data](./RecuperationData)
+## [Récupération Data](./RecuperationData)
 
 - [Scrapping](./RecuperationData/README.md#scrapping)
 - [Formatage des données](./RecuperationData/README.md#formatage-des-données)
