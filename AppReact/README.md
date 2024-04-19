@@ -43,3 +43,8 @@ De plus vous pouvez choisir qu'elle statisque afficher parmit toutes les statisq
 
 ## Graphique Radar
 
+Pour le graphique radar, lui récupere les datas de chaque équipes mais seulement pour une année et pour un ensemble de statisques precis comme pour cet exemple pour la meler. Le probleme étant que chaque statistiques n'est pas sur la meme échelle donc je viens faire un produit en croix : (ValeurDeBase * 100) / getMax(ValeurDeBase), pour récuperer un pourcentage, et mettre chaque statistiques sur une échelle de 100. Ici nous pouvons voir le radar pour l'année 2010 :
+
+![ExempleGraphRadar](../img/graphRadar.png)
+
+Vous pouvez, pour comparer, changer l'année via le selecteur a droite du graphique.
