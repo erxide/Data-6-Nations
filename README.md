@@ -20,6 +20,12 @@ Vous trouverez ici notre projet de fin du module data analyse de B2
 
 
 ## [App React](./AppReact)
+Pour lancer le Dashboard, exécutez les quatres commandes suivantes :
 
+-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+-cd /Data-6-Nations/AppReact/frontdata6nations
+-npm install
+-npm start
 
--Lancer react avec npm start
+Il faut patienter un peu avant le chargement du radar.
