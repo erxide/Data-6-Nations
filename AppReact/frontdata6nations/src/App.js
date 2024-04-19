@@ -30,6 +30,12 @@ function App() {
         const data = await axios.get(`http://localhost:8000/api/stats/`)
         localStorage.setItem(`List_stats`, JSON.stringify(data.data))
       };
+
+      const a = localStorage.getItem('MaxList');
+      if (!a){
+        
+      }
+
       setIsLoading(false);
     } catch(error) {
       console.error('Error fetching data: ', error);

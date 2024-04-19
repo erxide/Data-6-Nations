@@ -15,6 +15,8 @@ function Cate() {
 
     const handleStat = (event) => {
         setStat(event.target.value);
+        localStorage.setItem('selectedStat', event.target.value)
+
     };
 
     useEffect(() => {
@@ -51,7 +53,7 @@ function Cate() {
       }, []);
 
       useEffect (() => {
-        setStat(stats[33])
+        setStat(localStorage.getItem("selectedStat") || stats[33])
       }, [stats])
 
       useEffect (() => {
